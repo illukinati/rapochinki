@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="id.ignitech.rapochinki.Fragment.LayananFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_tab_form"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="JENIS \nLAYANAN"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btn_tab_motor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="MOTOR lorong"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_tab_kebersihan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="kebersihan"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/vf"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/content_utama"
+            layout="@layout/fragment_form" />
+
+        <include
+            android:id="@+id/content_ubah"
+            layout="@layout/fragment_motor" />
+
+        <include
+            android:id="@+id/content_ubah"
+            layout="@layout/fragment_kebersihan" />
+
+    </ViewFlipper>
+
+</LinearLayout>
